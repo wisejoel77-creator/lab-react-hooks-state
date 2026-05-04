@@ -11,11 +11,13 @@ const ProductList = ({products, onAddToCart}) => {
   return (
     <div>
       <h2>Available Products</h2>
-      
-      {/* TODO: Filter sample data using selected category */}
-      {products.map((product) => (
-        <ProductCard key={product.id} product={product} onAddToCart={onAddToCart} />
-      ))}
+      {products.length === 0 ? (
+        <p>No products available.</p>
+      ) : (
+        products.map((product) => (
+          <ProductCard key={product.id} product={product} onAddToCart={onAddToCart} />
+        ))
+      )}
     </div>
   )
 }

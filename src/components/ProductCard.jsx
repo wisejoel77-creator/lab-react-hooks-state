@@ -14,7 +14,6 @@ const ProductCard = ({ product, onAddToCart }) => {
       <button 
         data-testid={'product-' + product.id} 
         onClick={() => onAddToCart(product)}
-        disabled={!product.inStock}
       >
         Add to Cart
       </button>
